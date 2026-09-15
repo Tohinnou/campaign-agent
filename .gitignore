@@ -1,0 +1,17 @@
+# Secrets — jamais commités
+.env
+
+# Permissions locales Claude Code — propres à cette machine
+.claude/settings.local.json
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# LangGraph / LangSmith
+.langgraph_api/
+*.sqlite
+*.sqlite3

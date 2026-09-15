@@ -1,0 +1,20 @@
+# CI — la suite DÉTERMINISTE uniquement (§5 : le LLM reste HORS des tests).
+# Zéro secret requis : aucun test n'appelle OpenRouter. Si ce job réclame une clé
+# un jour, c'est qu'un test a violé la frontière (§6 r3/r5) — c'est le test qu'on
+# corrige, jamais la CI qu'on alimente en secrets.
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  deterministic-suite:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - run: python -m pytest -q

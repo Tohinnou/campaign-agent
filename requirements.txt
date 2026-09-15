@@ -1,0 +1,13 @@
+# AgBOM — dépendances DIRECTES de campaign-agent (§6 r10).
+# Toutes officielles (PyPI), vérifiées avant install (anti-slopsquatting §4).
+# Versions figées le 2026-07-19.
+
+langgraph==1.2.9          # orchestration : StateGraph, checkpointer, interrupt
+langchain==1.3.14         # façade LLM (messages, prompts)
+langchain-openai==1.3.5   # client ChatOpenAI → pointé vers OpenRouter (base_url)
+python-dotenv==1.2.2      # charge le .env (clé OpenRouter hors code, §5)
+pydantic==2.13.4          # output structuré des nodes LLM (extraction typée — nodes.py)
+pytest==9.1.1             # tests déterministes des fonctions pures (§6 r5)
+
+# Transitif à surveiller (NON activé avant J5) :
+#   langsmith 0.10.6  — tiré par langchain-core ; dormant tant que LANGSMITH_TRACING != true.
