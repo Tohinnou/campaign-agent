@@ -15,8 +15,11 @@
 - **Revue senior le 2026-09-15** (constats : 18 jours d'arrêt, DoD non tenue à 4× le
   délai, pas de git, pas d'evals, pas de chemin d'échec LLM) → `CLAUDE.md` amendé :
   règles 11-14 + chantiers **C1-C4 datés** (§7) + autonomie mesurée (§2).
-- **C1 lancé le 2026-09-15 :** dépôt git, premier commit, CI ; publication GitHub dès
-  l'authentification `gh`.
+- **C1 ✅ (2026-09-15) :** dépôt **public** https://github.com/Tohinnou/campaign-agent —
+  premier commit `e085d40` (29 fichiers, secrets vérifiés exclus), `main` poussé, **CI
+  verte au premier run** (`87 passed in 1.18s`, Ubuntu + Python 3.13, zéro secret).
+  L'artefact public existe désormais comme *dépôt* ; il lui manque encore sa **lecture**
+  — c'est C2.
 - **Prochaine action = C2, et elle est à WILLIAM seul : rédiger le teardown** depuis
   `meta/teardown_draft.md` (S2/S4/S5 d'abord, comme l'ossature l'indique), publier
   **≤ 2026-09-22**. Aucun code avant (règle 14).
